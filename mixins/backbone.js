@@ -38,7 +38,7 @@ BackboneMixin = {
           this
         );
       }
-    });
+    }.bind(this));
   },
 
   /* React lifecycle: create a listener object for subscriptions and an
