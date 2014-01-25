@@ -1,0 +1,50 @@
+{
+  "name": "rendr-react",
+  "version": "0.0.0",
+  "description": "React plugin for Rendr",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec ./test --recursive",
+    "coverage": "istanbul cover _mocha -- -R spec ./test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rcs/rendr-react"
+  },
+  "keywords": [
+    "rendr",
+    "react"
+  ],
+  "author": "Ryan Sorensen <rcsorensen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rcs/rendr-react/issues"
+  },
+  "homepage": "https://github.com/rcs/rendr-react",
+  "peerDependencies": {
+    "rendr": "*",
+    "react": "~0.8.0",
+    "backbone": "~1.0.0",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {
+    "react": "~0.8.0",
+    "underscore": "~1.4.4",
+    "backbone": "~1.0.0",
+    "mocha": "~1.17.0",
+    "sinon": "~1.7.3",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.5",
+    "karma-coffee-preprocessor": "~0.1.2",
+    "requirejs": "~2.1.10",
+    "karma-requirejs": "~0.2.1",
+    "karma-phantomjs-launcher": "~0.1.1",
+    "karma": "~0.10.9"
+  },
+  "dependencies": {
+    "chai": "~1.8.1"
+  }
+}
