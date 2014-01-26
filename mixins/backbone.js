@@ -26,7 +26,7 @@ BackboneMixin = {
         this.props._backboneListener.listenTo(
           obj,
           'change',
-          this.props._modelUpdate,
+          this.props._backboneModelUpdate.bind(this),
           this
         );
       }
@@ -34,7 +34,7 @@ BackboneMixin = {
         this.props._backboneListener.listenTo(
           obj,
           'add remove reset sort change destroy',
-          this.props._collectionUpdate,
+          this.props._backboneCollectionUpdate.bind(this),
           this
         );
       }
@@ -78,7 +78,7 @@ BackboneMixin = {
   /* React lifecycle: Remove existing listeners, register listeners to new props
    */
   componentWillReceiveProps: function(nextProps) {
-    this._backboneListener.stopListening();
+    this.props._backboneListener.stopListening();
     this._backboneSubscribeObjects(nextProps);
   },
 
