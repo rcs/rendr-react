@@ -82,6 +82,15 @@ BackboneMixin = {
     this._backboneSubscribeObjects(nextProps);
   },
 
+  backboneBind: function(model,key) {
+    return {
+      value: model.get(key),
+      requestChange: function(value) {
+        model.set(key,value);
+      }.bind(this)
+    }
+  }
+
 };
 
 module.exports = BackboneMixin;
